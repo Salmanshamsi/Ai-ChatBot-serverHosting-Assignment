@@ -4,10 +4,11 @@ const app = express();
 
 const port =  3000;
 
-
 app.use((req,rep)=>{
     console.log(rep.send("hello world"));
 })
 
 
-app.listen(port)
+app.listen(port, ()=>{
+    console.log("server responding");
+})
